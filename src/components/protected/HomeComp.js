@@ -30,6 +30,9 @@ export default class HomeComp extends React.Component {
                 width: "33.3%",
                 height: 200,
                 cursor: "pointer",
+                //backgroundColor: "papayawhip",
+                borderRadius: 10,
+                textAlign: "center",
               }}
               zDepth={this.state.zDepth}
               onMouseEnter={this.handleMouseEnter}
@@ -45,6 +48,13 @@ export default class HomeComp extends React.Component {
                 }
               }
             >
+              <h3
+                style={{
+                  color: "palevioletred",
+                }}
+              >
+                {this.props.title}
+              </h3>
             </Paper>
           )
         }

@@ -1,11 +1,11 @@
 import firebase from 'firebase'
 
 const config = {
-  apiKey: "AIzaSyAuKVukKfg58l7MJS7Qr8uFEK0mP8LRwaU",
-  authDomain: "anykao-5a6b5.firebaseapp.com",
-  databaseURL: "https://anykao-5a6b5.firebaseio.com",
-  storageBucket: "anykao-5a6b5.appspot.com",
-  messagingSenderId: "594632193797"
+  apiKey: "AIzaSyCfVdUXZ23oxQ2Vs47rVwUUFBhpzzHXRl0",
+  authDomain: "anykao-185ad.firebaseapp.com",
+  databaseURL: "https://anykao-185ad.firebaseio.com",
+  storageBucket: "anykao-185ad.appspot.com",
+  messagingSenderId: "630091638331"
 }
 
 firebase.initializeApp(config)

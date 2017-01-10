@@ -1,7 +1,8 @@
 import React from 'react'
-import { login } from '../helpers/auth'
+import { login, signInWithFacebook } from '../helpers/auth'
 import Paper from 'material-ui/Paper'
 import TextField from 'material-ui/TextField'
+import Divider from 'material-ui/Divider'
 import RaisedButton from 'material-ui/RaisedButton'
 import {
   containerStyle,
@@ -52,6 +53,22 @@ export default class Login extends React.Component {
             <RaisedButton
               type="submit"
               label="Login"
+            />
+            <Divider />
+            <RaisedButton
+              fullWidth
+              primary
+              label="Login with facebook"
+              onTouchTap={signInWithFacebook}
+            />
+            <RaisedButton
+              fullWidth
+              primary
+              label="send mail"
+              onTouchTap={
+                () => {
+                }
+              }
             />
           </form>
         </Paper>

@@ -2,6 +2,8 @@ import { style, media } from "typestyle"
 import {
   flex,
   vertical,
+  horizontal,
+  horizontallySpaced,
   center,
   centerCenter,
   newLayer,
@@ -45,7 +47,6 @@ export const centerCenterStyle = style(
   centerCenter,
 )
 
-
 export const footerStyle = style(
   {
     width: "100%",
@@ -56,3 +57,13 @@ export const footerStyle = style(
   }
 )
 
+export const homeStyle = style(
+  {
+    width: "100%",
+    padding: 20,
+    position: "relative",
+  },
+  horizontal,
+  horizontallySpaced(20),
+  media({minWidth: 601}, {width: "50%"}),
+)

@@ -3,9 +3,10 @@ import ReactMaterialUiNotifications from 'react-materialui-notifications'
 import { deepOrange500 } from 'material-ui/styles/colors'
 import Message from 'material-ui/svg-icons/communication/message'
 import {
-  containerStyle
+  containerStyle,
+  homeStyle,
 } from '../../styles'
-import HomeComp from '../HomeComp'
+import HomeComp from './HomeComp'
 
 export default class Dashboard extends React.Component {
   state={
@@ -39,9 +40,20 @@ export default class Dashboard extends React.Component {
       <div
         className={containerStyle}
       >
-        <HomeComp pathname={"/address"} />
-        <HomeComp pathname={"/paperwork"} />
-        <HomeComp pathname={"/dashboard"} />
+        <div
+          className={homeStyle}
+        >
+          <HomeComp pathname={"/setting"} title= "アカウント" />
+          <HomeComp pathname={"/address"} title= "個人情報"/>
+          <HomeComp pathname={"/dashboard"} title= "各種証明証発行"/>
+        </div>
+        <div
+          className={homeStyle}
+        >
+          <HomeComp pathname={"/setting"} title= "アカウント" />
+          <HomeComp pathname={"/address"} title= "個人情報"/>
+          <HomeComp pathname={"/dashboard"} title= "各種証明証発行"/>
+        </div>
         <ReactMaterialUiNotifications
           desktop={true}
           transitionName={{
