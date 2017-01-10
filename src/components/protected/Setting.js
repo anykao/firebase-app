@@ -4,18 +4,14 @@ import RaisedButton from 'material-ui/RaisedButton'
 import { red500, green500 } from 'material-ui/styles/colors'
 import { TextField } from 'redux-form-material-ui'
 import { reduxForm, Field } from 'redux-form'
-import { signInWithEmail } from '../../helpers/auth'
+import { firebaseAuth } from '../../config/constants'
 
 const onSubmit = (data, dispatch, ownProps) => {
   const {user} = ownProps
   const {email, oldPassword, newPassword} = data
-  console.log(email, oldPassword, newPassword)
-  signInWithEmail(
-    (credential) => user.reauthenticate(credential).then(function() {
-      return user.updatePassword(newPassword)
-    }, function(error) {
-      console.log(error)
-    })
+  const credential = (new firebaseAuth.EmailAuthProvider()).credential(email, oldPassword)
+  user.reauthenticate(credential).then(
+    () => user.updatePassword(newPassword)
   )
 }
 

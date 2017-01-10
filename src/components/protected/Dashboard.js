@@ -43,16 +43,16 @@ export default class Dashboard extends React.Component {
         <div
           className={homeStyle}
         >
-          <HomeComp pathname={"/setting"} title= "アカウント" />
-          <HomeComp pathname={"/address"} title= "個人情報"/>
-          <HomeComp pathname={"/dashboard"} title= "各種証明証発行"/>
+          <HomeComp pathname={"/setting"} title="アカウント" />
+          <HomeComp pathname={"/address"} title="個人情報"/>
+          <HomeComp pathname={"/dashboard"} title="各種証明証発行"/>
         </div>
         <div
           className={homeStyle}
         >
-          <HomeComp pathname={"/setting"} title= "アカウント" />
-          <HomeComp pathname={"/address"} title= "個人情報"/>
-          <HomeComp pathname={"/dashboard"} title= "各種証明証発行"/>
+          <HomeComp pathname={"/setting"} title="アカウント" />
+          <HomeComp pathname={"/address"} title="個人情報"/>
+          <HomeComp pathname={"/dashboard"} title="各種証明証発行"/>
         </div>
         <ReactMaterialUiNotifications
           desktop={true}
