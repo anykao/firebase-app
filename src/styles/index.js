@@ -9,6 +9,8 @@ import {
   newLayer,
 } from 'csstips'
 
+const gutter = 32
+
 export const pageStyle = style(
   {
     width: "100%",
@@ -21,6 +23,7 @@ export const pageStyle = style(
 export const paneStyle = style(
   {
     position: "relative",
+    padding: gutter,
   },
   flex,
   center,
