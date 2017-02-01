@@ -27,7 +27,7 @@ export default class HomeComp extends React.Component {
           ({isActive, location, href, onClick, transition}) => (
             <Paper
               style={{
-                width: "33.3%",
+                width: "100%",
                 height: 200,
                 cursor: "pointer",
                 //backgroundColor: "papayawhip",

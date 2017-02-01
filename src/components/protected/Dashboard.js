@@ -7,6 +7,7 @@ import {
   homeStyle,
 } from '../../styles'
 import HomeComp from './HomeComp'
+import { Page, Row, Column } from 'hedron'
 
 export default class Dashboard extends React.Component {
   state={
@@ -37,23 +38,24 @@ export default class Dashboard extends React.Component {
 
   render () {
     return (
-      <div
-        className={containerStyle}
+      <Page
+        fluid
+        width="100%"
       >
-        <div
-          className={homeStyle}
+        <Row
+          fluid
         >
-          <HomeComp pathname={"/setting"} title="アカウント" />
-          <HomeComp pathname={"/address"} title="個人情報"/>
-          <HomeComp pathname={"/dashboard"} title="各種証明証発行"/>
-        </div>
-        <div
-          className={homeStyle}
-        >
-          <HomeComp pathname={"/setting"} title="アカウント" />
-          <HomeComp pathname={"/address"} title="個人情報"/>
-          <HomeComp pathname={"/dashboard"} title="各種証明証発行"/>
-        </div>
+          <Column md={12}>
+            <HomeComp pathname={"/setting"} title="アカウント" />
+          </Column>
+          <Column md={6}>
+            <HomeComp pathname={"/address"} title="個人情報"/>
+          </Column>
+          <Column md={6}>
+            <HomeComp pathname={"/dashboard"} title="各種証明証発行"/>
+          </Column>
+        </Row>
+
         <ReactMaterialUiNotifications
           desktop={true}
           transitionName={{
@@ -65,7 +67,7 @@ export default class Dashboard extends React.Component {
           transitionAppear={true}
           transitionLeave={true}
         />
-      </div>
+      </Page>
     )
   }
 }

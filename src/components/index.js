@@ -5,6 +5,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Login from './Login'
 import Register from './Register'
+import Play from './Play'
 import Home from './Home'
 import Dashboard from './protected/Dashboard'
 import Address from './protected/Address'
@@ -83,6 +84,7 @@ export default class App extends Component {
               <Header authed={this.state.authed} onAuthed={this.handleAuthed} router={router} />
             <div className={paneStyle}>
               <Match pattern='/' exactly component={Home} />
+              <Match pattern='/play' exactly component={Play} />
               <MatchWhenUnauthed authed={this.state.authed} pattern='/login' component={Login} />
               <MatchWhenUnauthed authed={this.state.authed} pattern='/register' component={Register} />
               <MatchWhenAuthed authed={this.state.authed} pattern='/dashboard' component={Dashboard} />

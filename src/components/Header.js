@@ -1,11 +1,12 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar'
 import { green500 } from 'material-ui/styles/colors'
-import IconButton from 'material-ui/IconButton';
-import IconMenu from 'material-ui/IconMenu';
-import MenuItem from 'material-ui/MenuItem';
+import IconButton from 'material-ui/IconButton'
+import FlatButton from 'material-ui/FlatButton'
+import IconMenu from 'material-ui/IconMenu'
+import MenuItem from 'material-ui/MenuItem'
 //import FlatButton from 'material-ui/FlatButton';
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 //import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import { logout } from '../helpers/auth'
 import Drawer from 'material-ui/Drawer'
@@ -36,7 +37,9 @@ const Logged = ({authed, onAuthed, router}) => {
     return(
       <IconMenu
         iconButtonElement={
-          <IconButton><MoreVertIcon /></IconButton>
+          <IconButton>
+            <MoreVertIcon />
+          </IconButton>
         }
         targetOrigin={{horizontal: 'right', vertical: 'top'}}
         anchorOrigin={{horizontal: 'right', vertical: 'top'}}
@@ -77,7 +80,15 @@ export default class Header extends React.Component {
           style={{
             backgroundColor: green500 ,
           }}
-          title="社内システム"
+          title={
+            <div
+              style={{
+                cursor: "pointer",
+              }}
+            >
+              {"社内システム"}
+            </div>
+          }
           iconElementRight={<Logged {...this.props}/>}
           onLeftIconButtonTouchTap={
             () => {
